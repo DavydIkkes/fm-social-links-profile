@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Inter Bold";
+    src: url("assets/fonts/static/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("assets/fonts/static/Inter-Regular.ttf");
+}
+
+:root {
+    /* Colors */
+    --white: #FFFFFF;
+    --green: #C4F82A;
+    --grey-900: #141414;
+    --grey-800: #1F1F1F;
+    --grey-700: #333333;
+
+    /* Fonts */
+    --font-bold: "Inter Bold", sans-serif;
+    --font-regular: "Inter Regular", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+
+    background-color: var(--grey-900);
+    color: var(--white);
+}
+
+a, p, address {
+    text-decoration: none;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--grey-800);
+    border-radius: 12px;
+    width: 384px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.card__avatar {
+    width: 88px;
+    border-radius: 50%;
+}
+
+.card__owner {
+    font-family: var(--font-bold);
+    line-height: 150%;
+    font-size: 1.5rem;
+}
+
+.card__location {
+    font-family: var(--font-bold);
+    color: var(--green);
+    line-height: 150%;
+    font-size: 0.875rem;
+}
+
+.card__description {
+    font-family: var(--font-regular);
+    line-height: 150%;
+    font-size: 0.875rem;
+}
+
+.card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card__link {
+    width: 304px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--grey-700);
+    cursor: pointer;
+    
+}
+
+.card__link a {
+    font-family: var(--font-bold);
+    line-height: 150%;
+    font-size: 0.875rem;
+    color: var(--white);
+}
+
+.card__link:hover,
+.card__link:focus-within {
+    background-color: var(--green);
+}
+
+.card__link:hover a,
+.card__link:focus-within a {
+    color: var(--grey-900);
+}
